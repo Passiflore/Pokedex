@@ -1,0 +1,30 @@
+.cardsBody{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 318px;
+    height: 430px;
+    background-color: #9FE77C;
+    color: #FFFFFF ;
+    border-radius: 36px;
+    font-family: "Montserrat";
+}
+
+.cardsBody:hover{
+    background-color: #7FB963;
+    transition: 0.3s ease-in-out;
+}
+
+.pokemon{
+    width:260px;
+    margin-bottom: 16px;
+}
+
+.cardsTitle{
+    font-size: 32px;
+}
+
+.cardsId{
+    font-size: 24px;
+}

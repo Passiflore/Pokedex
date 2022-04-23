@@ -1,4 +1,5 @@
 import React from "react";
+import "./homePage.css";
 import Cards from "../components/cards/cards";
 import Header from "../components/header/header";
 
@@ -7,9 +8,16 @@ import Header from "../components/header/header";
 function HomePage () {
 
     return(
-        <div>
+        <div className="homeBody">
             <Header/>
-            <Cards/>
+            <div className="cardsContainer">
+                <Cards/>
+                <Cards/>
+                <Cards/>
+                <Cards/>
+                <Cards/>
+                <Cards/>
+            </div>
         </div>
     ) 
 };

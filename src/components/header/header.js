@@ -10,7 +10,7 @@ function Header () {
         <div className="header">
             <img src={logo} className="App-logo" alt="logo" />
             <div>
-                <input type="text" placeholder="Rechercher"></input>
+                <input className="haderInput" type="text"  placeholder="&#x1F50D; Rechercher"></input>
             </div>
         </div>
     ) 
