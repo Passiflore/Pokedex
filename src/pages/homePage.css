@@ -1,7 +1,8 @@
 @font-face {
 	font-family: "Montserrat";
-	src: url("../assets/fonts/Montserrat-Regular.ttf") format("ttf");
-	font-weight: 400;
+	src: local('Montserrat'), url("../assets/fonts/Montserrat-Regular.ttf") format('truetype');
+	font-weight: normal;
+
 }
 
 *,
@@ -11,10 +12,25 @@
 	padding: 0;
 	border: 0;
 	box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+.homeBody {
+    display: flex;
+    flex-direction: column;
 }
 
 .cardsContainer{
+    align-self: center;
     display: flex;
-    margin: 40px 53px 0 53px;
-    gap: 44px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 44px;
+    gap: 45px;
+    width: 100%;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+.cardsContainer::-webkit-scrollbar { 
+    display: none;
 }

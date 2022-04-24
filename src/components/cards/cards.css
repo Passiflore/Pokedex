@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 318px;
+    min-width: 350px;
     height: 430px;
     background-color: #9FE77C;
     color: #FFFFFF ;
@@ -17,7 +17,9 @@
 }
 
 .pokemon{
-    width:260px;
+    min-width:260px;
+    max-width: 260px;
+    min-height: 251px;
     margin-bottom: 16px;
 }
 

@@ -1,15 +1,18 @@
 import React from "react";
 import "./cards.css";
-import logo from '../../assets/images/bulbizarre.png'
+import pokemon from '../../assets/images/bulbizarre.png'
 
 
-function Cards () {
+function Cards (props) {
 
     return(
         <div className="cardsBody">
-            <img src={logo} className="pokemon" alt="logo" />
+            {/* <img src={pokemon} className="pokemon" alt="pokemon" />
             <p className="cardsTitle">Bulbizarre</p>
-            <p className="cardsId">001</p>
+            <p className="cardsId">001</p> */}
+            <img src={props.imgUrl} className="pokemon" alt="pokemon" />
+            <p className="cardsTitle">{props.pokemonName}</p>
+            <p className="cardsId">{props.pokemonId}</p>
         </div>
     ) 
 };

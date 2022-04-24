@@ -1,0 +1,18 @@
+.detailsPage{
+    display: flex;
+    width: 100%;
+}
+
+.detailsLeft{
+    background-color: #9FE77C;
+    width: 30%;
+    height: 100%;
+}
+.detailsLeft svg{
+    position: relative;
+    bottom:-70px;
+    left:-111px;
+    transform: rotate(90deg);
+    height: 240px;
+    width:982px;
+}
