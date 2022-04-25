@@ -84,8 +84,8 @@
 }
 
 .cardsBody:hover{
-    background-color: #7FB963;
-    transition: 0.3s ease-in-out;
+    filter: brightness(0.8);
+    transition: 0.2s ease-in-out;
 }
 
 .pokemon{

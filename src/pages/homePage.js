@@ -30,10 +30,12 @@ function HomePage () {
         const pokemonObject = {
             name : pokemonName,
             sprite : apiJson.sprites.other.dream_world.front_default,
+            secondSprite: apiJson.sprites.front_default, 
             id : apiJson.id,
             fristType : apiJson.types[0].type.name,
             types : apiJson.types
         }
+
         return pokemonObject;
     }
 
@@ -55,12 +57,9 @@ function HomePage () {
                     <div className="cardsContainer">
                         {
                             pokemonData.map((pokemon, index) => {
-                                return <Cards imgUrl={pokemon.sprite} pokemonName={pokemon.name} pokemonId={pokemon.id} pokemonFirstType={pokemon.fristType}/>
+                                return <Cards imgUrl={pokemon.sprite} secondSprite={pokemon.secondSprite} pokemonName={pokemon.name} pokemonId={pokemon.id} pokemonFirstType={pokemon.fristType}/>
                             })
                         }
-                    
-                        {/* <Cards imgUrl="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg" pokemonName="Ditto" pokemonId="001"/>
-                        <Cards imgUrl="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" pokemonName="Bulbasaur" pokemonId="002"/> */}
                     </div>
                 </div>
             ) 
