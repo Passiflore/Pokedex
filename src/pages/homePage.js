@@ -52,18 +52,28 @@ function HomePage () {
         setIsLoading(false);
     }
 
-     // Filter pokemon
+     // Filter and search pokemon
     useEffect( () => {
-        if (pokemonData && typeSelection) {
-            const filtered = pokemonData.filter((pokemon) => {
+
+        if (pokemonData && typeSelection) {  // Filter
+            const filteredByType = pokemonData.filter((pokemon) => {
                 return pokemon.firstType === typeSelection;
             })
-            setFilteredPokemon(filtered);
-        } else
-        {
+
+            setFilteredPokemon(filteredByType);
+
+        } else if(pokemonData && searchInput) { // Search
+            const filteredByName = pokemonData.filter((pokemon) =>{
+                if(pokemon.name.indexOf(searchInput) > -1) return pokemon.name;
+            })
+
+            setFilteredPokemon(filteredByName);
+
+        } else { // If None
+
             setFilteredPokemon(null);
         }
-    }, [typeSelection])
+    }, [typeSelection, searchInput])
 
 
     // Show on page
