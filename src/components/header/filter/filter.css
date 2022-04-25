@@ -1,0 +1,91 @@
+.typeButton div{
+    padding:8px 36px ;
+    width:170px;
+    border-radius: 21.5px;
+    font-family: Montserrat;
+    font-size: 20px;
+    text-align: center;
+    color:#FFFFFF;
+}
+
+.typeButton{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:25px;
+    margin-bottom: 25px;
+    gap:18px;
+    width: 100%;
+}
+
+.normal{
+    background-color: var(--clr-pk-normal);;
+}
+
+.fire{
+    background-color: var(--clr-pk-fire);;
+}
+
+.water{
+    background-color: var(--clr-pk-water);;
+}
+
+.grass{
+    background-color: var(--clr-pk-grass);;
+}
+
+.electric{
+    background-color: var(--clr-pk-electric);;
+}
+
+.ice{
+    background-color: var(--clr-pk-ice);;
+}
+
+.fighting{
+    background-color: var(--clr-pk-fighting);;
+}
+
+.poison{
+    background-color: var(--clr-pk-poison);;
+}
+
+.ground{
+    background-color: var(--clr-pk-ground);;
+}
+
+.flying{
+    background-color: var(--clr-pk-fly);;
+}
+
+.psychic{
+    background-color: var(--clr-pk-psychic);;
+}
+
+.bug{
+    background-color: var(--clr-pk-bug);;
+}
+
+.rock{
+    background-color: var(--clr-pk-roc);;
+}
+
+.ghost{
+    background-color: var(--clr-pk-ghost);;
+}
+
+.dragon{
+    background-color: var(--clr-pk-dragon);;
+}
+
+.dark{
+    background-color: var(--clr-pk-dark);;
+}
+
+.steel{
+    background-color: var(--clr-pk-steel);;
+}
+
+.fairy{
+    background-color: var(--clr-pk-fairy);;
+}

@@ -1,16 +1,23 @@
 import React from "react";
 import "./header.css";
 import logo from '../../assets/images/logo_pokedex.svg'
+import SearchBar from "./searchBar/searchBar";
+import Filter from "./filter/filter";
 
 
 
-function Header () {
+function Header (props) {
 
     return(
-        <div className="header">
-            <img src={logo} className="App-logo" alt="logo" />
+        <div className="headerContainer">
+            <div className="header">
+                <img src={logo} className="App-logo" alt="logo" />
+                <div>
+                    <SearchBar searchState={props.searchState}/>
+                </div>
+            </div>
             <div>
-                <input className="haderInput" type="text"  placeholder="&#x1F50D; Rechercher"></input>
+                <Filter typeSelection={props.typeSelection}/>
             </div>
         </div>
     ) 

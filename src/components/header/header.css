@@ -1,8 +1,11 @@
+.headerContainer{
+    border-bottom: 1px solid #D3D3D3;
+}
+
 .header{
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 129px;
     padding: 0 53px;
-    border-bottom: 1px solid #D3D3D3;
 }

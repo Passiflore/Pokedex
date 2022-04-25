@@ -8,6 +8,7 @@ npm start
 ```
 # Roadmap
 - [x] Fetch [PokeAPI](https://pokeapi.co/)
+- [x] Get the second sprite if the first does not exist
 - [ ] Detailed Pokemon Page
 - [ ] SearchBar 
 - [ ] FilterSearch

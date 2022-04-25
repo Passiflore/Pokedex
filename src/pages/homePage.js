@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./homePage.css";
 import Cards from "../components/cards/cards";
 import Header from "../components/header/header";
@@ -11,6 +11,9 @@ function HomePage () {
     const [isLoading, setIsLoading] = useState(true);
     const [pokemonList, setPokemonList] = useState();
     const [pokemonData, setPokemonData] = useState();
+    const [searchInput, setSearchInput] = useState("");
+    const [typeSelection, setTypeSelection] = useState("");
+    const [filteredPokemon, setFilteredPokemon] = useState("");
     let pokemonArray = [];
 
 
@@ -32,7 +35,7 @@ function HomePage () {
             sprite : apiJson.sprites.other.dream_world.front_default,
             secondSprite: apiJson.sprites.front_default, 
             id : apiJson.id,
-            fristType : apiJson.types[0].type.name,
+            firstType : apiJson.types[0].type.name,
             types : apiJson.types
         }
 
@@ -49,21 +52,63 @@ function HomePage () {
         setIsLoading(false);
     }
 
-    if (!isLoading) {
+    useEffect( () => {
+        if (pokemonData) {
+            const filtered = pokemonData.filter((pokemon) => {
+                return pokemon.firstType === typeSelection;
+            })
+            setFilteredPokemon(filtered);
+        }
+    }, [typeSelection])
+
+    useEffect( () => {
+        console.log(filteredPokemon)
+    }, [filteredPokemon])
+
+
+    useEffect (() => {
+        console.log(pokemonData);
+    }, [pokemonData])
+
+    // Show on page
+    if (!isLoading && !filteredPokemon) {
             return(
                 <div className="homeBody">
-                    {/* <DetailsPage/> */}
-                    <Header/>
+                    <Header searchState={setSearchInput} typeSelection={setTypeSelection}/>
+                    <div className="test">
+
+                    </div>
+                    <p>{searchInput}</p>
+                    {/* <p>Hello</p> */}
                     <div className="cardsContainer">
                         {
                             pokemonData.map((pokemon, index) => {
-                                return <Cards imgUrl={pokemon.sprite} secondSprite={pokemon.secondSprite} pokemonName={pokemon.name} pokemonId={pokemon.id} pokemonFirstType={pokemon.fristType}/>
+                                return <Cards imgUrl={pokemon.sprite} secondSprite={pokemon.secondSprite} pokemonName={pokemon.name} pokemonId={pokemon.id} pokemonFirstType={pokemon.firstType}/>
                             })
                         }
                     </div>
                 </div>
             ) 
-    }
+        } else if (!isLoading && filteredPokemon) {
+        return(
+            <div className="homeBody">
+                <Header searchState={setSearchInput} typeSelection={setTypeSelection}/>
+                <div className="test">
+
+                </div>
+                <p>{searchInput}</p>
+                {/* <p>Hello</p> */}
+                <div className="cardsContainer">
+                    {
+                        filteredPokemon.map((pokemon, index) => {
+                            return <Cards imgUrl={pokemon.sprite} secondSprite={pokemon.secondSprite} pokemonName={pokemon.name} pokemonId={pokemon.id} pokemonFirstType={pokemon.firstType}/>
+                        })
+                    }
+                </div>
+            </div>
+        ) 
+        
+    } {}
 
     
 };
