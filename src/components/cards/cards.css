@@ -9,78 +9,147 @@
     color: #FFFFFF ;
     border-radius: 36px;
     font-family: "Montserrat";
+    text-transform: capitalize;
 }
 
+
 .normal{
-    background-color: var(--clr-pk-normal);;
+    background-color: var(--clr-pk-normal);
+}
+.normal svg path{
+    fill: var(--clr-pk-normal);
 }
 
 .fire{
-    background-color: var(--clr-pk-fire);;
+    background-color: var(--clr-pk-fire);
+}
+
+.fire svg path{
+    fill: var(--clr-pk-fire);
 }
 
 .water{
-    background-color: var(--clr-pk-water);;
+    background-color: var(--clr-pk-water);
+}
+
+.water svg path{
+    fill: var(--clr-pk-water);
 }
 
 .grass{
-    background-color: var(--clr-pk-grass);;
+    background-color: var(--clr-pk-grass);
+}
+
+.grass svg path{
+    fill: var(--clr-pk-grass);
 }
 
 .electric{
-    background-color: var(--clr-pk-electric);;
+    background-color: var(--clr-pk-electric);
+}
+
+.electric svg path {
+    fill: var(--clr-pk-electric);
 }
 
 .ice{
-    background-color: var(--clr-pk-ice);;
+    background-color: var(--clr-pk-ice);
+}
+
+.ice svg path{
+    fill: var(--clr-pk-ice);
 }
 
 .fighting{
-    background-color: var(--clr-pk-fighting);;
+    background-color: var(--clr-pk-fighting);
+}
+
+.fighting svg path{
+    fill: var(--clr-pk-fighting);
 }
 
 .poison{
-    background-color: var(--clr-pk-poison);;
+    background-color: var(--clr-pk-poison);
 }
 
 .ground{
-    background-color: var(--clr-pk-ground);;
+    background-color: var(--clr-pk-ground);
+}
+
+.ground svg path{
+    fill: var(--clr-pk-ground);
 }
 
 .flying{
-    background-color: var(--clr-pk-fly);;
+    background-color: var(--clr-pk-fly);
+}
+
+.flying svg path{
+    fill: var(--clr-pk-fly);
 }
 
 .psychic{
-    background-color: var(--clr-pk-psychic);;
+    background-color: var(--clr-pk-psychic);
+}
+
+.psychic svg path{
+    fill: var(--clr-pk-psychic);
 }
 
 .bug{
-    background-color: var(--clr-pk-bug);;
+    background-color: var(--clr-pk-bug);
+}
+
+.bug svg path{
+    fill: var(--clr-pk-bug);
 }
 
 .rock{
-    background-color: var(--clr-pk-roc);;
+    background-color: var(--clr-pk-roc);
+}
+
+.rock svg path{
+    fill: var(--clr-pk-roc);
 }
 
 .ghost{
-    background-color: var(--clr-pk-ghost);;
+    background-color: var(--clr-pk-ghost);
+}
+
+.ghost svg path{
+    fill: var(--clr-pk-ghost);
 }
 
 .dragon{
-    background-color: var(--clr-pk-dragon);;
+    background-color: var(--clr-pk-dragon);
+}
+
+.dragon svg path{
+    fill: var(--clr-pk-dragon);
 }
 
 .dark{
-    background-color: var(--clr-pk-dark);;
+    background-color: var(--clr-pk-dark);
+}
+
+.dark svg path{
+    fill: var(--clr-pk-dark);
 }
 
 .steel{
-    background-color: var(--clr-pk-steel);;
+    background-color: var(--clr-pk-steel);
+}
+
+.steel svg path{
+    fill: var(--clr-pk-steel);
 }
 
 .fairy{
-    background-color: var(--clr-pk-fairy);;
+    background-color: var(--clr-pk-fairy);
+}
+
+.fairy svg path{
+    fill: var(--clr-pk-fairy);
 }
 
 .cardsBody:hover{

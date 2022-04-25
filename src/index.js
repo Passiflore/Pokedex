@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import HomePage from './pages/homePage'
+import { BrowserRouter } from "react-router-dom";
+import DetailsPage from './pages/detailsPage/detailsPage';
+import App from './App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <HomePage/>
+    <BrowserRouter>
+      <App/>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

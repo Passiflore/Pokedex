@@ -1,18 +1,155 @@
 .detailsPage{
     display: flex;
     width: 100%;
+    height: 100vh;overflow: hidden;
+
 }
 
 .detailsLeft{
-    background-color: #9FE77C;
+    position: relative;
+    padding: 50px 53px;
     width: 30%;
-    height: 100%;
+    height: 100vh;
 }
 .detailsLeft svg{
-    position: relative;
-    bottom:-70px;
-    left:-111px;
+    position: absolute;
+    z-index: -1;
+    top:3vh;
+    right:-590px;
     transform: rotate(90deg);
-    height: 240px;
+    height: 100vh;
     width:982px;
+}
+
+.pokemonImage{
+    margin-top: 190px;
+    width:370px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 129px;
+    padding: 0 53px;
+}
+
+.pokemonId{
+    width: 395px;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 45px;
+    color: #FFFFFF;
+}
+
+.detailsRight{
+    margin-left: 20vw;
+    height: 100vh;
+    width: 45%;
+    font-family: 'Montserrat';
+    font-size: 35px;
+    color: #000000;
+}
+.pokemonTitle{
+    margin: 54px 0 67px 0;
+    text-align: center; 
+    font-size: 60px;
+    text-transform: capitalize;
+}
+
+.detailsRight .detailsContent{
+    display: flex;
+    justify-content: space-between;
+}
+
+.detailsRight .detailsContent:not(:last-child) {
+    margin-bottom: 60px;
+}
+
+.spritesContainer{  
+    display: flex;
+    justify-content: space-between;
+
+}
+.sprites{
+    display: flex;
+    flex-direction: column;
+    font-size: 29px;
+    text-align: center;
+}
+
+.sprites img {
+    width:264px;
+}
+
+.normal{
+    background-color: var(--clr-pk-normal);;
+}
+
+.fire{
+    background-color: var(--clr-pk-fire);;
+}
+
+.water{
+    background-color: var(--clr-pk-water);;
+}
+
+.grass{
+    background-color: var(--clr-pk-grass);;
+}
+
+.electric{
+    background-color: var(--clr-pk-electric);;
+}
+
+.ice{
+    background-color: var(--clr-pk-ice);;
+}
+
+.fighting{
+    background-color: var(--clr-pk-fighting);;
+}
+
+.poison{
+    background-color: var(--clr-pk-poison);;
+}
+
+.ground{
+    background-color: var(--clr-pk-ground);;
+}
+
+.flying{
+    background-color: var(--clr-pk-fly);;
+}
+
+.psychic{
+    background-color: var(--clr-pk-psychic);;
+}
+
+.bug{
+    background-color: var(--clr-pk-bug);;
+}
+
+.rock{
+    background-color: var(--clr-pk-roc);;
+}
+
+.ghost{
+    background-color: var(--clr-pk-ghost);;
+}
+
+.dragon{
+    background-color: var(--clr-pk-dragon);;
+}
+
+.dark{
+    background-color: var(--clr-pk-dark);;
+}
+
+.steel{
+    background-color: var(--clr-pk-steel);;
+}
+
+.fairy{
+    background-color: var(--clr-pk-fairy);;
 }

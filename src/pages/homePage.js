@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link,} from "react-router-dom";
 import "./homePage.css";
 import Cards from "../components/cards/cards";
 import Header from "../components/header/header";
@@ -85,11 +86,11 @@ function HomePage () {
 
                     </div>
                     <p>{searchInput}</p>
-                    {/* <p>Hello</p> */}
                     <div className="cardsContainer">
                         {
                             pokemonData.map((pokemon, index) => {
-                                return <Cards imgUrl={pokemon.sprite} secondSprite={pokemon.secondSprite} pokemonName={pokemon.name} pokemonId={pokemon.id} pokemonFirstType={pokemon.firstType}/>
+                                
+                                return <Link to={pokemon.name}><Cards imgUrl={pokemon.sprite} secondSprite={pokemon.secondSprite} pokemonName={pokemon.name} pokemonId={pokemon.id} pokemonFirstType={pokemon.firstType}/></Link>
                             })
                         }
                     </div>
@@ -103,11 +104,10 @@ function HomePage () {
 
                 </div>
                 <p>{searchInput}</p>
-                {/* <p>Hello</p> */}
                 <div className="cardsContainer">
                     {
                         filteredPokemon.map((pokemon, index) => {
-                            return <Cards imgUrl={pokemon.sprite} secondSprite={pokemon.secondSprite} pokemonName={pokemon.name} pokemonId={pokemon.id} pokemonFirstType={pokemon.firstType}/>
+                            return <Link to="/{pokemon.name}"><Cards imgUrl={pokemon.sprite} secondSprite={pokemon.secondSprite} pokemonName={pokemon.name} pokemonId={pokemon.id} pokemonFirstType={pokemon.firstType}/></Link>
                         })
                     }
                 </div>

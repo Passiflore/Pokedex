@@ -1,6 +1,7 @@
 import React from "react";
 import "./cards.css";
 import pokemon from '../../assets/images/bulbizarre.png'
+import noPicture from '../../assets/images/noPicture.png'
 
 
 function Cards (props) {
@@ -12,13 +13,23 @@ function Cards (props) {
             <p className="cardsId">{props.pokemonId}</p>
         </div>)
     }
-    else{
+    else if(props.secondSprite){
         return (
             <div className={`cardsBody ${props.pokemonFirstType}`}>
                 <img src={props.secondSprite} className="pokemon" alt="pokemon" />
+                <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${props.pokemonId}.png`} className="pokemon" alt="pokemon" />
                 <p className="cardsTitle">{props.pokemonName}</p>
                 <p className="cardsId">{props.pokemonId}</p>
             </div> )
+    } else {
+        return (
+            <div className={`cardsBody ${props.pokemonFirstType}`}>
+                <img src={noPicture} className="pokemon" alt="pokemon" />
+                {/* <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${props.pokemonId}.png`} className="pokemon" alt="pokemon" /> */}
+                <p className="cardsTitle">{props.pokemonName}</p>
+                <p className="cardsId">{props.pokemonId}</p>
+            </div> )
+
     }
 }
 
