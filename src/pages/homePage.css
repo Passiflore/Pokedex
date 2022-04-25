@@ -15,6 +15,27 @@
     font-family: "Montserrat";
 }
 
+:root {
+    --clr-pk-normal: #A8A878;
+    --clr-pk-fire: #FA934A;
+    --clr-pk-water: #6890F0;
+    --clr-pk-grass: #9FE77C;
+    --clr-pk-electric: #F8D030;
+    --clr-pk-ice: #98D8D8;
+    --clr-pk-fighting: #C03028;
+    --clr-pk-poison: #A040A0;
+    --clr-pk-ground: #E0C068;
+    --clr-pk-fly: #A890F0;
+    --clr-pk-psychic: #F85888;
+    --clr-pk-bug: #A8B820;
+    --clr-pk-roc: #B8A038;
+    --clr-pk-ghost: #705898;
+    --clr-pk-dragon: #7038F8;
+    --clr-pk-dark: #705848;
+    --clr-pk-steel: #B8B8D0;
+    --clr-pk-fairy: #FFA9C3;
+}
+
 .homeBody {
     display: flex;
     flex-direction: column;
