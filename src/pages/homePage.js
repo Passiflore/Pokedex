@@ -52,23 +52,19 @@ function HomePage () {
         setIsLoading(false);
     }
 
+     // Filter pokemon
     useEffect( () => {
-        if (pokemonData) {
+        if (pokemonData && typeSelection) {
             const filtered = pokemonData.filter((pokemon) => {
                 return pokemon.firstType === typeSelection;
             })
             setFilteredPokemon(filtered);
+        } else
+        {
+            setFilteredPokemon(null);
         }
     }, [typeSelection])
 
-    useEffect( () => {
-        console.log(filteredPokemon)
-    }, [filteredPokemon])
-
-
-    useEffect (() => {
-        console.log(pokemonData);
-    }, [pokemonData])
 
     // Show on page
     if (!isLoading && !filteredPokemon) {

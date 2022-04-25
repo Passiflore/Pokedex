@@ -4,7 +4,11 @@ import "./filter.css";
 function Filter (props) {
     function clickHandler(event){
         const selectedType = event.target.className;
-        props.typeSelection(selectedType);
+        if(selectedType == 'none'){
+            props.typeSelection(undefined);
+        } else {
+            props.typeSelection(selectedType);
+        }
     }
 
 
@@ -28,6 +32,7 @@ function Filter (props) {
             <div onClick={clickHandler} className='dark'>Dark</div>
             <div onClick={clickHandler} className='steel'>Steel</div>
             <div onClick={clickHandler} className='fairy'>Fairy</div>
+            <div onClick={clickHandler} className='none'>None</div>
         </div>
     )
 
