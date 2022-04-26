@@ -2,7 +2,6 @@
     display: flex;
     width: 100%;
     height: 100vh;overflow: hidden;
-
 }
 
 .detailsLeft{
@@ -50,12 +49,26 @@
     font-size: 35px;
     color: #000000;
 }
+
 .pokemonTitle{
     margin: 54px 0 67px 0;
     text-align: center; 
     font-size: 60px;
     text-transform: capitalize;
 }
+
+.detailTypes div{
+    padding:8px 36px ;
+    width:170px;
+    border-radius: 21.5px;
+    font-family: Montserrat;
+    font-size: 20px;
+    text-align: center;
+    color:#FFFFFF;
+    text-transform: capitalize;
+}
+
+
 
 .detailsRight .detailsContent{
     display: flex;

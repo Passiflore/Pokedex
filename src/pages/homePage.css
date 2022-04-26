@@ -15,6 +15,10 @@
     font-family: "Montserrat";
 }
 
+a{
+    text-decoration: none;
+}
+
 :root {
     --clr-pk-normal: #A8A878;
     --clr-pk-fire: #FA934A;

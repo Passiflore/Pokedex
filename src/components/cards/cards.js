@@ -17,7 +17,6 @@ function Cards (props) {
         return (
             <div className={`cardsBody ${props.pokemonFirstType}`}>
                 <img src={props.secondSprite} className="pokemon" alt="pokemon" />
-                <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${props.pokemonId}.png`} className="pokemon" alt="pokemon" />
                 <p className="cardsTitle">{props.pokemonName}</p>
                 <p className="cardsId">{props.pokemonId}</p>
             </div> )
@@ -25,7 +24,6 @@ function Cards (props) {
         return (
             <div className={`cardsBody ${props.pokemonFirstType}`}>
                 <img src={noPicture} className="pokemon" alt="pokemon" />
-                {/* <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${props.pokemonId}.png`} className="pokemon" alt="pokemon" /> */}
                 <p className="cardsTitle">{props.pokemonName}</p>
                 <p className="cardsId">{props.pokemonId}</p>
             </div> )

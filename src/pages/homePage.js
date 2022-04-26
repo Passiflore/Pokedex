@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link,} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./homePage.css";
 import Cards from "../components/cards/cards";
 import Header from "../components/header/header";
@@ -82,10 +82,6 @@ function HomePage () {
             return(
                 <div className="homeBody">
                     <Header searchState={setSearchInput} typeSelection={setTypeSelection}/>
-                    <div className="test">
-
-                    </div>
-                    <p>{searchInput}</p>
                     <div className="cardsContainer">
                         {
                             pokemonData.map((pokemon, index) => {
@@ -100,23 +96,17 @@ function HomePage () {
         return(
             <div className="homeBody">
                 <Header searchState={setSearchInput} typeSelection={setTypeSelection}/>
-                <div className="test">
-
-                </div>
-                <p>{searchInput}</p>
                 <div className="cardsContainer">
                     {
                         filteredPokemon.map((pokemon, index) => {
-                            return <Link to="/{pokemon.name}"><Cards imgUrl={pokemon.sprite} secondSprite={pokemon.secondSprite} pokemonName={pokemon.name} pokemonId={pokemon.id} pokemonFirstType={pokemon.firstType}/></Link>
+                            return <Link to={pokemon.name}><Cards imgUrl={pokemon.sprite} secondSprite={pokemon.secondSprite} pokemonName={pokemon.name} pokemonId={pokemon.id} pokemonFirstType={pokemon.firstType}/></Link>
                         })
                     }
                 </div>
             </div>
         ) 
         
-    } {}
-
-    
+    }
 };
 
 export default HomePage;
